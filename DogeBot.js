@@ -1,10 +1,3 @@
-//═══════════════════════════════════════════════════════//
-//If you want to recode, reupload
-//or copy the codes,
-//pls give credit
-//© 2022 Xeon Bot Inc. Doge Bot 
-//Thank you to Lord Buddha, Family and Myself
-//═══════════════════════════════════════════════════════//
 const
 	{
 		WAConnection,
@@ -80,8 +73,8 @@ const thumb = fs.readFileSync ('./media/dogetb.jpg')
 
 //══════════[ Developer Number ]══════════//
 
-developerNo = '916909137213'
-developerName= '🦄Dream Guy Xeon'
+developerNo = '918882938780'
+developerName= '🦄Devesh Kajla'
 
 //══════════[ Apikeys ]══════════//
 //----credit goes to all the respected owner---//
@@ -474,59 +467,7 @@ for (let anji of setik){
 					}
 				  }
 
-//══════════[ Rank Function ]══════════//
 
-			const levelRole = getLevelingLevel(sender)
-   	        	     var role = 'bronz'
-   	     if (levelRole <= 3) {
-   	         role = 'Copper'
-   	     } else if (levelRole <= 5) {
-   	         role = 'Iron'
-   	     } else if (levelRole <= 7) {
-   	         role = 'Silver'
-   	     } else if (levelRole <= 10) {
-   	         role = 'Gold'
-   	     } else if (levelRole <= 12) {
-   	         role = 'Platinum'
-   	     } else if (levelRole <= 15) {
-   	         role = 'Mithril'
-   	     } else if (levelRole <= 18) {
-   	         role = 'Orichalcum'
-   	     } else if (levelRole <= 25) {
-   	         role = 'Adamantite'
-   	     }
-
-	//══════════[ Leveling Function ]══════════//
-	
-            if (isGroup) {
-            const currentLevel = getLevelingLevel(sender)
-            const checkId = getLevelingId(sender)
-            try {
-                if (currentLevel === undefined && checkId === undefined) addLevelingId(sender)
-                const amountXp = Math.floor(Math.random() * 10) + 100
-                const requiredXp = 5000 * (Math.pow(2, currentLevel) - 1)
-                var getLevel = getLevelingLevel(sender)
-                addLevelingXp(sender, amountXp)
-                if (requiredXp <= getLevelingXp(sender)) {
-                addLevelingLevel(sender, 1)   
-                var lvlup = (`╭───「 *🥳ʟᴇᴠᴇʟ ᴜᴘ🥳* 」
-│
-├ 💜 𝗡𝗮𝗺𝗲 : ${pushname}
-├ 📱 𝗡𝘂𝗺𝗯𝗲𝗿 : ${sender.split('@')[0]}
-├ 🏅 𝗥𝗮𝗻𝗸 : ${role}
-├ 🔖 𝗫𝗣 : ${getLevelingXp(sender)}
-├ 💠 𝗟𝗲𝘃𝗲𝗹  : ${getLevelingLevel(sender)}
-│
-╰───「 *🥳ʟᴇᴠᴇʟ ᴜᴘ🥳* 」`)
-		  but = [{ buttonId: `!menu`, buttonText: { displayText: 'MENU 🗃️' }, type: 1 }]
-          sendButton(from, lvlup, '*Doge Bot*', but)
-
-                }
-            } catch (err) {
-                console.error(err)
-            }
-        }        
-        
 
 //══════════[ Antilink & Antivirtex ]══════════//
 
@@ -651,31 +592,6 @@ rows: [
 "rowId": `${prefix}randomimage`
 },
 {
-"title": "RANDOM VIDEO",
-"description": `Display A List Of Random Video Features`,
-"rowId": `${prefix}randomvideo`
-},
-{
-"title": "AESTHETIC GIRL MENU",
-"description": `Display A List Of 18+ Intake Features`,
-"rowId": `${prefix}asupanmenu`
-},
-{
-"title": "RANDOM GIRL MENU",
-"description": `Display A List Of Random Girl Features`,
-"rowId": `${prefix}cecanmenu`
-},
-{
-"title": "ANIME MENU",
-"description": `Display A List Of Anime Features`,
-"rowId": `${prefix}animemenu`
-},
-{
-"title": "NSFW/HENTAI MENU",
-"description": `Display A List Of Nsfw 18+ Features`,
-"rowId": `${prefix}nsfwmenu`
-},
-{
 "title": "STICKER MENU",
 "description": `Display A List Of Sticker Features`,
 "rowId": `${prefix}stickermenu`
@@ -691,29 +607,14 @@ rows: [
 "rowId": `${prefix}soundmenu`
 },
 {
-"title": "OCR MENU",
-"description": `Display A List Of Ocr Features`,
-"rowId": `${prefix}ocrmenu`
-},
-{
 "title": "CONVERTER MENU",
 "description": `Display A List Of Convert Features`,
 "rowId": `${prefix}convertmenu`
 },
 {
-"title": "LEVELING MENU",
-"description": `Display A List Of Leveling Features`,
-"rowId": `${prefix}levelingmenu`
-},
-{
 "title": "SEARCH MENU",
 "description": `Display A List Of Searching Features`,
 "rowId": `${prefix}searchmenu`
-},
-{
-"title": "APK MENU",
-"description": `Display A List Of Apk Features`,
-"rowId": `${prefix}apkmenu`
 },
 {
 "title": "OTHER MENU",
@@ -744,7 +645,6 @@ menu =
 ${gaya2} ${prefix}antilink _on / off_
 ${gaya2} ${prefix}antivirtex _on / off_
 ${gaya2} ${prefix}welcome _on / off_
-${gaya2} ${prefix}nsfw _on / off_
 ${gaya2} ${prefix}group _open / closed_
 ${gaya2} ${prefix}promote _@tag / reply_
 ${gaya2} ${prefix}demote _@tag / reply_
@@ -764,8 +664,6 @@ ${gaya2} ${prefix}contag _@tag|Name_
 ${gaya2} ${prefix}sticktag _Reply Sticker_
 ${gaya2} ${prefix}totag _Reply Image_
 ${gaya2} ${prefix}creategroup _Name|tag_
-${gaya2} ${prefix}promoteall
-${gaya2} ${prefix}demoteall
 ${gaya2} ${prefix}listadmin
 ${gaya2} ${prefix}leave
 ${gaya2} ${prefix}grupowner
@@ -1007,192 +905,6 @@ ${gaya2} ${prefix}storybus
 ${gaya2} ${prefix}storyanime`
 DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}abcde`, buttonText: { displayText: '\n\nAKU ADALAH GAY' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
-case 'asupanmenu':
-
-menu =
-`*「 AESTHETIC GIRL MENU」*
-
-${gaya2} ${prefix}asupan
-${gaya2} ${prefix}asupanloli
-${gaya2} ${prefix}hijaber
-${gaya2} ${prefix}bocil
-${gaya2} ${prefix}rikagusriani
-${gaya2} ${prefix}santuy
-${gaya2} ${prefix}ukhty
-${gaya2} ${prefix}gheayubi
-${gaya2} ${prefix}nantalia`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
-break
-case 'cecanmenu':
-
-menu =
-`*「 RANDOM GIRL MENU  」*
-
-${gaya2} ${prefix}cogan
-${gaya2} ${prefix}cecan
-${gaya2} ${prefix}cecan2
-${gaya2} ${prefix}cogan2
-${gaya2} ${prefix}jeni
-${gaya2} ${prefix}jiso
-${gaya2} ${prefix}justina
-${gaya2} ${prefix}lisa
-${gaya2} ${prefix}rose
-${gaya2} ${prefix}ryujin
-${gaya2} ${prefix}china
-${gaya2} ${prefix}vietnam
-${gaya2} ${prefix}thainlad
-${gaya2} ${prefix}indonesia
-${gaya2} ${prefix}korea
-${gaya2} ${prefix}japan
-${gaya2} ${prefix}malaysia`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
-break
-case 'animemenu':
-
-menu =
-`*「 ANIME 」*
-
-${gaya2} ${prefix}elf
-${gaya2} ${prefix}shinobu
-${gaya2} ${prefix}megumin
-${gaya2} ${prefix}wallnime
-${gaya2} ${prefix}sao
-${gaya2} ${prefix}hsdxd
-${gaya2} ${prefix}lovelive
-${gaya2} ${prefix}naruto
-${gaya2} ${prefix}loli
-${gaya2} ${prefix}waifu
-${gaya2} ${prefix}neko
-${gaya2} ${prefix}husbu
-${gaya2} ${prefix}milf
-${gaya2} ${prefix}cosplay
-${gaya2} ${prefix}nekonime
-${gaya2} ${prefix}shota
-${gaya2} ${prefix}wallml
-${gaya2} ${prefix}akira
-${gaya2} ${prefix}akiyama
-${gaya2} ${prefix}ana
-${gaya2} ${prefix}asuna
-${gaya2} ${prefix}ayuzawa
-${gaya2} ${prefix}boruto
-${gaya2} ${prefix}chiho
-${gaya2} ${prefix}chitoge
-${gaya2} ${prefix}deidara
-${gaya2} ${prefix}eba
-${gaya2} ${prefix}elaina
-${gaya2} ${prefix}emilia
-${gaya2} ${prefix}erza
-${gaya2} ${prefix}gremory
-${gaya2} ${prefix}hestia
-${gaya2} ${prefix}hinata
-${gaya2} ${prefix}isuzu
-${gaya2} ${prefix}itachi
-${gaya2} ${prefix}itori
-${gaya2} ${prefix}kagura
-${gaya2} ${prefix}kakasih
-${gaya2} ${prefix}kaori
-${gaya2} ${prefix}kaneki
-${gaya2} ${prefix}kotori
-${gaya2} ${prefix}kurumi
-${gaya2} ${prefix}madara
-${gaya2} ${prefix}mikasa
-${gaya2} ${prefix}miku
-${gaya2} ${prefix}minato
-${gaya2} ${prefix}nezuko
-${gaya2} ${prefix}rize
-${gaya2} ${prefix}sagiri
-${gaya2} ${prefix}sakura
-${gaya2} ${prefix}sasuke
-${gaya2} ${prefix}shina
-${gaya2} ${prefix}shinka
-${gaya2} ${prefix}shinomiya
-${gaya2} ${prefix}shizuka
-${gaya2} ${prefix}tejina
-${gaya2} ${prefix}toukachan
-${gaya2} ${prefix}tsunade
-${gaya2} ${prefix}yotsuba
-${gaya2} ${prefix}yuki
-${gaya2} ${prefix}yumeko
-${gaya2} ${prefix}fanart
-${gaya2} ${prefix}nino`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
-break
-case 'nsfwmenu':
-
-menu =
-`*「 NSFW/HENTAI MENU 」*
-
-${gaya2} ${prefix}hentaisearch _code_
-${gaya2} ${prefix}animefeets
-${gaya2} ${prefix}chiisaihentai
-${gaya2} ${prefix}yaoi
-${gaya2} ${prefix}bj
-${gaya2} ${prefix}feet
-${gaya2} ${prefix}lewd
-${gaya2} ${prefix}feed
-${gaya2} ${prefix}trap
-${gaya2} ${prefix}eron
-${gaya2} ${prefix}solo
-${gaya2} ${prefix}gasm
-${gaya2} ${prefix}poke
-${gaya2} ${prefix}anal
-${gaya2} ${prefix}holo
-${gaya2} ${prefix}tits
-${gaya2} ${prefix}kuni
-${gaya2} ${prefix}kiss
-${gaya2} ${prefix}erok
-${gaya2} ${prefix}smug
-${gaya2} ${prefix}baka
-${gaya2} ${prefix}solog
-${gaya2} ${prefix}feetg
-${gaya2} ${prefix}lewdk
-${gaya2} ${prefix}cuddle
-${gaya2} ${prefix}cum_jpg
-${gaya2} ${prefix}erofeet
-${gaya2} ${prefix}holoero
-${gaya2} ${prefix}classic
-${gaya2} ${prefix}erokemo
-${gaya2} ${prefix}fox_girl
-${gaya2} ${prefix}futanari
-${gaya2} ${prefix}lewdkemo
-${gaya2} ${prefix}wallpaper
-${gaya2} ${prefix}pussy_jpg
-${gaya2} ${prefix}kemonomimi
-${gaya2} ${prefix}nsfw_avatar
-${gaya2} ${prefix}wallpaper
-${gaya2} ${prefix}eroyuri
-${gaya2} ${prefix}ecchi
-${gaya2} ${prefix}hololewd
-${gaya2} ${prefix}sideoppai
-${gaya2} ${prefix}animefeets
-${gaya2} ${prefix}animebooty
-${gaya2} ${prefix}animearmpits
-${gaya2} ${prefix}hentaifemdom
-${gaya2} ${prefix}lewdanimegirls
-${gaya2} ${prefix}biganimetiddies
-${gaya2} ${prefix}ass
-${gaya2} ${prefix}ahegao
-${gaya2} ${prefix}bdsm
-${gaya2} ${prefix}blowjob
-${gaya2} ${prefix}cuckold
-${gaya2} ${prefix}cum
-${gaya2} ${prefix}ero
-${gaya2} ${prefix}femdom
-${gaya2} ${prefix}foot
-${gaya2} ${prefix}gangbang
-${gaya2} ${prefix}glasses
-${gaya2} ${prefix}hentai
-${gaya2} ${prefix}jahy
-${gaya2} ${prefix}masturbation
-${gaya2} ${prefix}neko
-${gaya2} ${prefix}orgy
-${gaya2} ${prefix}panties
-${gaya2} ${prefix}pussy
-${gaya2} ${prefix}thighs
-${gaya2} ${prefix}yuri
-${gaya2} ${prefix}bokep`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
-break
 case 'stickermenu':
 
 menu =
@@ -1330,16 +1042,6 @@ ${gaya2} ${prefix}sound73
 ${gaya2} ${prefix}sound74`
 DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
-case 'ocrmenu':
-
-menu =
-`*「 OCR MENU 」*
-
-${gaya2} ${prefix}ninjaname _Name_
-${gaya2} ${prefix}stylishcoolname
-${gaya2} ${prefix}ssweb _URL_`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
-break
 case 'convertmenu':
 
 menu =
@@ -1365,15 +1067,6 @@ ${gaya2} ${prefix}tourl _reply image/vid_
 ${gaya2} ${prefix}tts _code text_`
 DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
-case 'levelingmenu':
-
-menu =
-`*「 LEVELING MENU 」*
-
-${gaya2} ${prefix}profile
-${gaya2} ${prefix}level`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
-break
 case 'searchmenu':
 
 menu =
@@ -1384,21 +1077,6 @@ ${gaya2} ${prefix}ytsearch _Query_
 ${gaya2} ${prefix}pinterest _Query_
 ${gaya2} ${prefix}googleimg _Query_
 ${gaya2} ${prefix}google _Query_`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
-break
-case 'apkmenu':
-
-menu =
-`*「 APK MENU 」*
-
-${gaya2} ${prefix}apkdone _Apk Name_
-${gaya2} ${prefix}apkgoogle _Apk Name_
-${gaya2} ${prefix}hostapk _Apk Name_
-${gaya2} ${prefix}revdl _Apk Name_
-${gaya2} ${prefix}toraccino _Apk Name_
-${gaya2} ${prefix}uapkpro _Apk Name_
-${gaya2} ${prefix}apkmody _Apk Name_
-${gaya2} ${prefix}apkshub _Apk Name_`
 DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'othermenu':
@@ -1450,43 +1128,6 @@ break
 case 'abcde':
 
 reply('damn gay, really gay, wow, no one wants to play with him bro, its unclean because he is gay 🗿')
-break
-
-//══════════[ RENT DLL ]══════════//
-
-case 'rentbot':
-menu =
-`*${ucapanWaktu} @${senderr.split('@')[0]}*
-
-\`\`\`OPEN FOR RENT :\`\`\`
-➪ *1 Week :* _100INR_
-➪ *1 Month :* _200INR_
-➪ *Permanent :* _550INR_
-
-\`\`\`OPEN FOR STUDENTS :\`\`\`
-➪ *Ordinary student :* _500INR_
-➪ *Premium student :* _1000INR_
-
-\`\`\`OPEN FOR SC :\`\`\`
-➪ *Wanna buy this script? :* _Price: ₹250 (India)_
-
-For those who want to buy script or interested in any of the above
-Can request, if interested please contact the developer`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal} - ${time}_*`, buttons: [{ buttonId: `${prefix}payment`, buttonText: { displayText: 'PAYMENT 💸' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr]}}}, 'buttonsMessage')
-break
-case 'bayar':
-case 'payment':
-
-gambar = fs.readFileSync('./media/doged.jpg')
-menunya = `*「 PAYMENT 」*
-
-• Note: Talk to the owner before payment
-• FamPay : _Please scan the qr above_`
-but = [
-{ buttonId: `${prefix}menu`, buttonText: { displayText: 'MENU 🗃️' }, type: 1 },
-{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }
-]
-sendButImage(from, menunya, `*_${tanggal} - ${time}_*`, gambar, but)
 break
 
 //══════════[ DOWNLOAD FEATURES ]══════════//
@@ -2862,18 +2503,6 @@ DogeXeonOP.sendMessage(from, {displayName: `The owner ${botname}`, vcard: vcard2
 })
 const devsound = fs.readFileSync('./media/botdev.mp3')
 DogeXeonOP.sendMessage(from, devsound, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek })
-break
-case 'sc':
-case 'script':
-case 'sourcode':
-
-scpic = fs.readFileSync('./media/scpic.jpg')
-scsell = `*🐶𝗗𝗼𝗴𝗲 𝗕𝗼𝘁 𝗩𝟯 𝗦𝗰𝗿𝗶𝗽𝘁🐶*\n\n_• 𝒀𝒐𝒖𝑻𝒖𝒃𝒆: https://youtube.com/channel/UCvAo9TZ0Pw9vrJ_0WYRyO3A_\n_• 𝑮𝒊𝒕𝑯𝒖𝒃: https://github.com/DGXeon/DogeBot3_\n\n_𝙄𝙛 𝙮𝙤𝙪 𝙬𝙞𝙨𝙝 𝙩𝙤 𝙗𝙪𝙮 𝙪𝙣𝙚𝙣𝙘𝙧𝙮𝙥𝙩𝙚𝙙 𝙨𝙘𝙧𝙞𝙥𝙩 𝙘𝙡𝙞𝙘𝙠 𝙤𝙣 𝙩𝙝𝙚 𝙗𝙪𝙮 𝙨𝙘𝙧𝙞𝙥𝙩 𝙗𝙪𝙩𝙩𝙤𝙣 𝙗𝙚𝙡𝙤𝙬._`
-but = [
-{ buttonId: `${prefix}rentbot`, buttonText: { displayText: 'BUY SCRIPT 💵' }, type: 1 },
-{ buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 }
-]
-sendButImage(from, scsell, `*_${tanggal} - ${time}_*`, scpic, but)
 break
 case 'runtime':
 
